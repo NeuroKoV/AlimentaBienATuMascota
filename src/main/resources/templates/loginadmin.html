@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Users / Profile - Admin</title>
+  <title>Alimenta Bien A Tu Mascota - Admin</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -323,35 +323,37 @@
         </p>
         
         
-        <a th:href="@{/crear}">Crear Usuario</a>
+        <a class="btn btn-success btn-dark" th:href="@{/crear}">Crear Usuario</a>
         
         <br>
         <br>
         
         <h2>Listado de Usuarios de la base de datos</h2>
           <div class="container mt-3">
-        <div th:if="${usuarios != null and !usuarios.empty}">
+             <div class="table-wrapper-scroll-y my-custom-scrollbar"> 
+            <div th:if="${usuarios != null and !usuarios.empty}">
        
-            <table class="table table-striped" style="background-color: white;">
+            <table class="table  table-striped" style="background-color: white;">
                 <tr>
                     <th>ID Usuario</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>Email</th>
-                    <th>Usuario</th>
+                    <th>Correo</th>
+                    <th>User</th>
                     <th>Password</th>
                    
                 </tr>
                 <tr th:each="usuario : ${usuarios}">
-                    <td th:text="${usuario.id_usuario}">Mostrar IDUsuario</td>
+                    <td th:text="${usuario.idusuario}">Mostrar IDUsuario</td>
                     <td th:text="${usuario.nombre}">Mostrar Nombres</td>
                     <td th:text="${usuario.apellido}">Mostrar Apellidos</td>
                     <td th:text="${usuario.correo}">Mostrar Email</td>
-                    <td th:text="${usuario.usuario}">Mostrar Usuario</td>
+                    <td th:text="${usuario.user}">Mostrar User</td>
                     <td th:text="${usuario.password}">Mostrar Password</td>
             
                 </tr>
             </table>
+            </div>
          </div>
         </div>
         <div th:if="${usuarios == null or usuarios.empty}">

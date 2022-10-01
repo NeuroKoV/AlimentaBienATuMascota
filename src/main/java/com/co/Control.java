@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.co;
 
 import com.co.DAO.UsuarioDAO;
@@ -14,12 +11,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
+
 @Controller
 public class Control {
     
     @Autowired
     private UsuarioDAO usuarioDao;
-    
     
     @GetMapping("/")
     public String inicio(){
@@ -31,7 +28,7 @@ public class Control {
     }
     @GetMapping("/loginadmin")
     public String loginadmin(Model model){
-        var usuarios = usuarioDao.findAll();
+        var usuarios= usuarioDao.findAll();
         model.addAttribute("usuarios",usuarios);
         return "loginadmin";
     }
@@ -41,10 +38,17 @@ public class Control {
         return "crear";
     }
     
+    @GetMapping("/productos")
+    public String productos(){
+        return "productos";
+    }
+    
     @PostMapping("/guardar")
-    public String guardar(@ModelAttribute Usuario usuario ){
-        usuarioDao.save(usuario);
+    public String guardar(@ModelAttribute Usuario usuarios){
+        usuarioDao.save(usuarios);
         return "redirect:/loginadmin";
     }
+    
+       
 }
 

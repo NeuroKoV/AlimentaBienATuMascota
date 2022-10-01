@@ -616,3 +616,48 @@
   padding-top: 70px ;
 }
 
+/*--------------------------------------------------------------
+# Admin
+--------------------------------------------------------------*/
+#crear p{
+  
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c384e;
+    
+}
+#crear h2{
+  
+  font-size: 30px;
+  font-weight: 600;
+  color: #748CAB;
+  
+    
+}
+#crear{
+    
+  font-size: 15px;
+  font-weight: 600;
+  color: #748CAB;
+  text-align: center;  
+    
+}
+
+input[type=text],input[type=password],input[type=number],select{
+    width: 100%;
+    padding:12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+.my-custom-scrollbar {
+position: relative;
+height: 250px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}

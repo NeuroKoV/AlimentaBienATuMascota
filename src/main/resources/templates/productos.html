@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Alimenta Bien A Tu Mascota - Index</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/Mascot/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+        <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/admin.css" rel="stylesheet">
+        <link href="assets/css/product.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center">
+
+                <h1 class="logo me-auto"><a href="index.html" class="logo me-auto"><img src="assets/img/Mascot/PetIcon.png" alt="" class="img-fluid"></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+                <nav id="navbar" class="navbar order-last order-lg-0">
+                    <ul>
+                        <li><a class="active" th:href="@{/}">Inicio</a></li>
+
+                        <!--<li><a href="trainers.html">Trainers</a></li>
+                       <li><a href="events.html">Events</a></li>
+                       <li><a href="pricing.html">Pricing</a></li>-->
+
+                        <li class="dropdown"><a href="#events"><span>Comida para Mascotas</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                                <li><a class="active" th:href="@{/productos}">Gatos</a></li>
+                                <li><a href="#">Perros</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#popular-courses">Noticias</a></li>
+                        <li><a href="#why-us">Sobre nosotros</a></li>
+                        <li><a href="#footer">Contacto</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+
+                <a th:href="@{/login}" class="get-started-btn">Iniciar sesión</a>
+
+            </div>
+        </header><!-- End Header --><br>
+
+        <!-- ======= Producto ======= --> 
+        <main >
+            <section>
+
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-sm">
+
+
+                            <!--Section: Filtro Content-->
+                            <section class="" id="filtro">
+
+                                <p class=" font-weight-bold">Filter panel</p>
+
+                                <style>
+                                    .link-black a {
+                                        color: black;
+                                    }
+
+                                    .link-black a:hover {
+                                        color: #0056b3;
+                                    }
+
+                                    .link-black .active {
+                                        color: #0056b3;
+                                    }
+
+                                    .divider-small {
+                                        width: 30px;
+                                        background-color: rgba(0, 0, 0, .1);
+                                        height: 3px;
+                                    }
+                                </style>
+
+
+                                <!--Grid row-->
+                                <div class="row d-flex justify-content-center">
+
+                                    <!--Grid column-->
+                                    <div class="col">
+
+                                        <!-- Filter panel -->
+                                        <div class="mb-5">
+                                            <h5 class="font-weight-bold mb-3">Order by</h5>
+
+                                            <div class="divider-small mb-3"></div>
+
+                                            <ul class="list-unstyled link-black">
+                                                <li class="mb-2">
+                                                    <a href="" class="active">Marca</a>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <a href="" class="">Popularity</a>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <a href="" class="">Rating</a>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <a href="" class="">Beneficio</a>
+                                                </li>
+                                                <li class="mb-2">
+                                                    <a href="" class="">Ingredientes</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- Filter panel -->
+
+                                        <!-- Filter panel -->
+                                        <div class="mb-5">
+
+                                            <h5 class="font-weight-bold mb-3">Edad</h5>
+
+                                            <div class="divider-small mb-3"></div>
+
+                                            <div class="form-check pl-0 mb-2">
+                                                <input type="radio" class="form-check-input" id="materialGroupExample1" name="groupOfMaterialRadios">
+                                                <label class="form-check-label" for="materialGroupExample1">All</label>
+                                            </div>
+
+                                            <div class="form-check pl-0 mb-2">
+                                                <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios"
+                                                       checked>
+                                                <label class="form-check-label" for="materialGroupExample2">Cachorro</label>
+                                            </div>
+
+                                            <div class="form-check pl-0 mb-2">
+                                                <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios">
+                                                <label class="form-check-label" for="materialGroupExample3">Adulto</label>
+                                            </div>
+
+                                            <div class="form-check pl-0 mb-2">
+                                                <input type="radio" class="form-check-input" id="materialGroupExample4" name="groupOfMaterialRadios">
+                                                <label class="form-check-label" for="materialGroupExample4">Senior</label>
+                                            </div>
+
+                                        </div>
+                                        <!-- Filter panel -->
+
+                                        <!-- Filter panel -->
+                                        <div class="mb-5">
+
+                                            <h5 class="font-weight-bold mb-3">Price</h5>
+
+                                            <div class="divider-small mb-3"></div>
+
+                                            <form class="range-field">
+                                                <input type="range" min="0" max="319" />
+                                            </form>
+
+                                            <div class="row justify-content-center">
+
+                                                <!-- Grid column -->
+                                                <div class="col-md-6 text-left">
+                                                    <p class="dark-grey-text"><strong id="resellerEarnings">0$</strong></p>
+                                                </div>
+                                                <!-- Grid column -->
+
+                                                <!-- Grid column -->
+                                                <div class="col-md-6 text-right">
+                                                    <p class="dark-grey-text"><strong id="clientPrice">319$</strong></p>
+                                                </div>
+                                                <!-- Grid column -->
+                                            </div>
+
+                                        </div>
+                                        <!-- Filter panel -->
+
+                                        <!-- Filter panel -->
+                                        <div class="link-black">
+
+                                            <h5 class="font-weight-bold mb-3">Rating</h5>
+
+                                            <div class="divider-small mb-3"></div>
+
+                                            <div class="amber-text fa-sm mb-1">
+                                                
+                                                <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                <a href="" class="ml-2 active">4 and more</a>
+                                            </div>
+
+                                            <div class="amber-text fa-sm mb-1">
+                                                
+                                                <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                <a href="" class="ml-2">3 - 3,99</a>
+                                            </div>
+
+                                            <div class="amber-text fa-sm mb-1">
+                                                
+                                                <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                <a href="" class="ml-2">3.00 and less</a>
+                                            </div>
+
+                                        </div>
+                                        <!-- Filter panel -->
+
+                                    </div>
+                                    <!--Grid column-->
+
+                                </div>
+                                <!--Grid row-->
+
+
+                            </section>
+                            <!--Section: Content-->
+
+
+                        </div>
+                        <div class="col-9">
+                            <div class="container ">
+
+                                <!-- Section: Block Content -->
+                                <section>
+
+                                    <h3 class="font-weight-bold dark-grey-text text-center mb-5">Comida de Gatos</h3>
+
+                                    <!-- Grid row -->
+                                    <div class="row product-list">
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/fit=scale-down,width=400,format=auto,quality=80,onerror=redirect/https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://laikapp.s3.amazonaws.com/dev_images_products/923_143824_Hills___Science_Diet_Feline_Adul_1_6_Cat_1647020711_500x500.png" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Hills - Science Diet Feline Adul 1-6 Cat</a></strong></h5>
+                                                    <span class="badge badge-danger mb-2">bestseller</span>
+
+
+                                                    <ul class="rating">
+                                                       
+                                                        <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                            
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-half"style="color:#748CAB"></i>
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$94.900</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/fit=scale-down,width=250,format=auto,quality=80,onerror=redirect/https://s3.us-east-1.amazonaws.com/laikapp/images_products/af0bccb8c322194a7b6fa2f5045beedb.jpg" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Equilibrio - F Gato Filhote</a></strong></h5>
+                                                    <span class="badge badge-danger mb-2">bestseller</span>
+
+                                                    <ul class="rating">
+                                                       
+                                                            <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star-half"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                       
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$22.950</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/fit=scale-down,width=250,format=auto,quality=80,onerror=redirect/https://s3.us-east-1.amazonaws.com/laikapp/images_products/0fabf4ae36abc825810f2bf3b80f3b50.jpg" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Nutrecat - Alimento Gatos Liberty</a></strong></h5>
+                                                    <span class="badge badge-info mb-2">new</span>
+
+                                                    <ul class="rating">
+                                                         <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                            
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$94.390</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://laikapp.s3.amazonaws.com/dev_images_products/77842_184245_Dr_Clauders___Cat_Senior___Light_1660750399_800x800.jpg" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Dr Clauders - Cat Senior / Light</a></strong></h5>
+                                                    <span class="badge badge-danger mb-2">bestseller</span>
+
+                                                    <ul class="rating">
+                                                        <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star-half"style="color:#748CAB"></i>
+                                                        
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$58.900</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid column -->
+
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://s3.us-east-1.amazonaws.com/laikapp/images_products/ff66822856bade7e45d30694e534aada.jpg" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Kirkland Signature - Gatos</a></strong></h5>
+                                                    <span class="badge badge-danger mb-2">bestseller</span>
+
+                                                    <ul class="rating">
+                                                        <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                            
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star"style="color:#748CAB"></i>
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$163.100</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid column -->
+                                        <!-- Grid column -->
+                                        <div class="col-md-4">
+
+                                            <!-- Card -->
+                                            <div class="card card-ecommerce">
+
+                                                <div class="view overlay">
+                                                    <img src="https://laika.com.co/cdn-cgi/image/onerror=redirect,format=auto,fit=scale-down,width=600,quality=80/https://laikapp.s3.amazonaws.com/dev_images_products/14821_NUTRA_GOLD_HOLISTIC__INDOOR_SE%C3%91IOR_CAT_1595093918_1000x982.jpg" class="img-fluid"
+                                                         alt="sample image">
+                                                    <a>
+                                                        <div class="mask rgba-white-slight"></div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="card-body">
+
+                                                    <h5 class="card-title mb-1"><strong><a class="dark-grey-text">Nutra Gold - Holistic Indoor Senior Cat</a></strong></h5>
+                                                    <span class="badge badge-danger mb-2">bestseller</span>
+
+
+                                                    <ul class="rating">
+                                                        <i class="bi bi-star-fill " style="color:#748CAB"></i>
+                                                      
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                            
+                                                            <i class="bi bi-star-fill"style="color:#748CAB"></i>
+                                                       
+                                                            <i class="bi bi-star-half"style="color:#748CAB"></i>
+                                                    </ul>
+
+                                                    <div class="card-footer pb-0">
+                                                        <div class="row mb-0">
+                                                            <span class="float-left">
+                                                                <strong>$88.500</strong>
+                                                            </span>
+                                                            <span class="float-right">
+                                                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                                                                    <i class="fas fa-shopping-cart ml-3"></i>
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- Card -->
+
+                                        </div>
+                                        <!-- Grid row -->
+
+                                        <!-- Grid row -->
+                                        <div class="row justify-content-center mt-3 mb-4">
+                                            <!-- Pagination -->
+                                            <nav class="mb-4">
+                                                <ul class="pagination pagination-circle pg-blue mb-0">
+                                                    <!-- First -->
+                                                    <li class="page-item disabled clearfix d-none d-md-block">
+                                                        <a class="page-link waves-effect waves-effect">First</a>
+                                                    </li>
+                                                    <!-- Arrow left -->
+                                                    <li class="page-item disabled">
+                                                        <a class="page-link waves-effect waves-effect" aria-label="Previous">
+                                                            <span aria-hidden="true">«</span>
+                                                            <span class="sr-only">Previous</span>
+                                                        </a>
+                                                    </li>
+                                                    <!-- Numbers -->
+                                                    <li class="page-item active">
+                                                        <a class="page-link waves-effect waves-effect">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link waves-effect waves-effect">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link waves-effect waves-effect">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link waves-effect waves-effect">4</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link waves-effect waves-effect">5</a>
+                                                    </li>
+                                                    <!-- Arrow right -->
+                                                    <li class="page-item">
+                                                        <a class="page-link waves-effect waves-effect" aria-label="Next">
+                                                            <span aria-hidden="true">»</span>
+                                                            <span class="sr-only">Next</span>
+                                                        </a>
+                                                    </li>
+                                                    <!-- First -->
+                                                    <li class="page-item clearfix d-none d-md-block">
+                                                        <a class="page-link waves-effect waves-effect">Last</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                            <!-- Pagination -->
+                                        </div>
+                                        <!-- Grid row -->
+
+                                </section>
+                                <!-- Section: Block Content -->
+
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+            </section>
+        </main><!-- End #main -->
+
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h3>Alimenta Bien a Tu Mascota</h3>
+                            <a>
+                                <img src="assets/img/Mascot/PetIcon.png" alt="..." style="width:128px;height:128px;" >
+                            </a>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#events">Comida para Mascotas</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#popular-courses">Noticias</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#why-us">Sobre Nosotros</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Suscribete a nuestro Newsletter</h4>
+                            <p>Te enviaremos noticias relacionadas a la salud de nuestras mascotas.</p>
+                            <form action="" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe">
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="container d-md-flex py-4">
+
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Alimenta Bien A Tu Mascota</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!-- All the links in the footer should remain intact. -->
+                        <!-- You can delete the links only if you purchased the pro version. -->
+                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <!-- Js Plugins -->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.slicknav.js"></script>
+        <script src="js/mixitup.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+
+
+
+    </body>
+
+</html>
