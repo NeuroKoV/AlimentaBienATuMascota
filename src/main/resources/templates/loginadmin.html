@@ -291,7 +291,7 @@
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
-              <img src="assets/img/Mascot/profile-img.png" alt="Profile" class="rounded-circle">
+              <img src="assets/img/Mascot/opcat.png" alt="Profile" class="rounded-circle">
               <h2>Admin</h2>
               <h3>Web Designer</h3>
               <div class="social-links mt-2">
@@ -318,6 +318,7 @@
 
     <section id="bienvenido" class="inner-page">
       <div class="container">
+          
         <p>
           Bienvenido Administrador
         </p>
@@ -341,6 +342,8 @@
                     <th>Correo</th>
                     <th>User</th>
                     <th>Password</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                    
                 </tr>
                 <tr th:each="usuario : ${usuarios}">
@@ -350,6 +353,12 @@
                     <td th:text="${usuario.correo}">Mostrar Email</td>
                     <td th:text="${usuario.user}">Mostrar User</td>
                     <td th:text="${usuario.password}">Mostrar Password</td>
+                    <td>
+                        <a class="btn btn-success btn-sm" th:href="@{/editar/}+${usuario.idusuario}">Editar</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger btn-sm"th:href="@{/eliminar/}+${usuario.idusuario}">Eliminar</a>
+                    </td>
             
                 </tr>
             </table>
@@ -370,7 +379,7 @@
       </div>
     </section>
 
-    </div>
+    </div> <br>   
 
   </main><!-- End #main -->
 
